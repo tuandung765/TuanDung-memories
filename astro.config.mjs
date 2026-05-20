@@ -12,5 +12,5 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://tuandung765.github.io',
-  base: '/TuanDung-memories', // Tên repository của bạn
+  base: '/TuanDung-memories', // CỰC KỲ QUAN TRỌNG: Phải khớp với tên Repo của bạn
 });
