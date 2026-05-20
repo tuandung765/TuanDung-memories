@@ -1,0 +1,84 @@
+---
+import '../styles/global.css';
+const { title = 'Lưu Bút Lớp 9 💕', description = 'Nơi lưu giữ những trang lưu bút ngọt ngào của tình yêu học đường lớp 9.' } = Astro.props;
+---
+<!doctype html>
+<html lang="vi" data-theme="luubut9">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content={description}/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <title>{title}</title>
+</head>
+<body class="font-lora antialiased" style="color:#3D1530; background:#FFF8FB;">
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 border-b border-pink-200/50 backdrop-blur-md" style="background:rgba(255,248,251,.92);">
+    <div class="max-w-6xl mx-auto px-5 flex items-center justify-between h-16">
+
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="heart-seal w-9 h-9 text-base group-hover:scale-110 transition-transform">💕</div>
+        <div>
+          <span class="font-dancing font-bold text-xl leading-none block" style="color:#CC0055;">Lưu Bút 9</span>
+          <span class="text-[10px] font-crimson tracking-widest uppercase opacity-70" style="color:#FF2D77;">Tình Yêu Học Đường</span>
+        </div>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-1 font-crimson text-[15px]">
+        {[
+          {href:'/',label:'Trang Chủ',icon:'🏠'},
+          {href:'/luu-but',label:'Lưu Bút',icon:'💌'},
+          {href:'/bo-suu-tap',label:'Bộ Sưu Tập',icon:'📖'},
+          {href:'/ve-chung-toi',label:'Về Chúng Tôi',icon:'🌸'},
+        ].map(({href,label,icon})=>(
+          <li>
+            <a href={href} class="flex items-center gap-1.5 px-4 py-2 rounded transition-all duration-200 hover:bg-pink-50" style="color:#3D1530;">
+              <span class="text-sm">{icon}</span>{label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <a href="/viet-luu-but" class="btn-love hidden md:flex items-center gap-2 text-sm tracking-wider">
+        ✍️ Viết Lưu Bút
+      </a>
+    </div>
+  </nav>
+
+  <main><slot /></main>
+
+  <!-- FOOTER -->
+  <footer class="mt-24 border-t border-pink-200/60" style="background:#FFE8F2;">
+    <div class="max-w-6xl mx-auto px-6 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div>
+          <p class="font-dancing text-4xl font-bold mb-3" style="color:#CC0055;">Lưu Bút 9</p>
+          <p class="font-crimson text-base leading-relaxed opacity-80" style="color:#3D1530;">
+            Những trang lưu bút ngọt ngào nhất của tình yêu học đường lớp 9 — nơi mỗi chữ viết đều chứa đựng một trái tim.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-playfair font-semibold mb-4" style="color:#CC0055;">Khám Phá</h4>
+          <ul class="space-y-2 font-crimson text-[15px] opacity-80">
+            {['Trang Chủ','Viết Lưu Bút','Bộ Sưu Tập','Về Chúng Tôi'].map(l=>(
+              <li><a href="#" class="hover:opacity-100 hover:underline underline-offset-2 transition">{l}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="card-diary p-6 relative" style="transform:rotate(1deg);">
+          <div class="tape-pink" style="top:-10px;left:30px;"></div>
+          <p class="font-dancing text-xl leading-relaxed mb-3" style="color:#CC0055;">
+            "Tình yêu học đường trong sáng nhất, đẹp nhất và khó quên nhất trong cuộc đời."
+          </p>
+          <p class="font-crimson text-xs tracking-widest uppercase opacity-60">— Kỷ Niệm Lớp 9</p>
+        </div>
+      </div>
+      <div class="text-center mt-10 pt-8 border-t border-pink-200/50">
+        <p class="font-crimson text-sm opacity-50">© 2024 Lưu Bút Lớp 9 💕 Làm với tình yêu và ký ức.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
