@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WriteNote from '../components/WriteNote.jsx';
+---
+<Layout title="Viết Lưu Bút 💕 — Lớp 9">
+  <div class="py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="badge-class mb-4 inline-block" style="color:#FF2D77;">✍️ Trang Soạn Thảo</span>
+        <h1 class="font-playfair text-5xl sm:text-6xl font-bold mt-3 mb-5" style="color:#3D1530;">
+          Viết Lưu Bút <span class="text-gradient-love">Cho Người Ấy</span>
+        </h1>
+        <p class="font-lora text-lg max-w-xl mx-auto leading-relaxed opacity-75">
+          Đây là khoảnh khắc để bạn nói ra tất cả những điều còn chưa nói.
+          Hãy viết thật lòng — người nhận sẽ trân trọng từng chữ của bạn.
+        </p>
+      </div>
+
+      <div class="card-diary p-6 mb-12 flex gap-5 items-start max-w-3xl mx-auto relative">
+        <div class="tape-pink" style="top:-10px;left:50px;"></div>
+        <div class="text-3xl flex-shrink-0">💡</div>
+        <div>
+          <h4 class="font-playfair font-semibold mb-2" style="color:#3D1530;">Mẹo Viết Lưu Bút Chạm Đến Trái Tim</h4>
+          <ul class="font-crimson text-sm space-y-1.5 opacity-75">
+            <li>• Nhắc đến một kỷ niệm cụ thể chỉ hai người biết</li>
+            <li>• Nói thẳng cảm xúc — đừng để lòng rào đón quá nhiều</li>
+            <li>• Kết thúc bằng một điều bạn hy vọng cho tương lai của hai người</li>
+            <li>• Dùng tên thật của người ấy — nghe ngọt hơn nhiều</li>
+          </ul>
+        </div>
+      </div>
+
+      <WriteNote client:load />
+    </div>
+  </div>
+</Layout>
