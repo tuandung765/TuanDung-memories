@@ -8,3 +8,9 @@ export default defineConfig({
     react(),
   ],
 });
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  site: 'https://tuandung765.github.io',
+  base: '/TuanDung-memories', // Tên repository của bạn
+});
